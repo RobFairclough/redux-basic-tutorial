@@ -7,8 +7,9 @@ const Footer = () => {
     return (
         <div>
             <span>Show:</span>
-            {filters.map(filter => (
+            {filters.map((filter, i) => (
                 <FilterLink
+                    key={i}
                     filter={VisibilityFilters[`SHOW_${filter.toUpperCase()}`]}
                 >
                     {filter}
